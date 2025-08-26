@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RavenClaw — Server Status</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg1: #0d1a33;
+  --bg2: #112b55;
+  --accent: #1f8fff;
+  --card-bg: rgba(255,255,255,0.06);
+  --muted: rgba(255,255,255,0.75);
+  --hover-btn: rgba(255,255,255,0.12);
+  --btn-radius: 10px;
+  --pill-transition: 0.3s;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+body {
+  font-family: 'Poppins', system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  color: #fff;
+}
+.wrap {
+  width: 100%;
+  max-width: 920px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+header.app { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.logo {
+  width:54px; height:54px; border-radius:10px;
+  background: linear-gradient(135deg, #1f8fff, #4aa3ff);
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; color:#002; font-size:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.35);
+}
+h1 { font-size:18px; font-weight:700; color:var(--accent) }
+
+.status-row { display:flex; gap:12px; align-items:center; margin:14px 0; flex-wrap:wrap }
+.pill {
+  padding:8px 12px; border-radius:999px; background: rgba(0,0,0,0.25);
+  font-weight:600; font-size:13px; transition: background var(--pill-transition);
+}
+.pill.online { background: linear-gradient(90deg, #0c4, #097); color:#dfffe8; box-shadow:0 6px 22px rgba(0,200,120,0.08);}
+.pill.offline { background: linear-gradient(90deg,#3a2b2b,#4b3232); color:#ffdede;}
+
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:8px }
+.meta { background: rgba(255,255,255,0.03); padding:12px; border-radius:10px; font-size:13px; }
+.label { font-size:12px; opacity:0.8 }
+.val { margin-top:6px; font-size:14px; font-weight:600; color:var(--muted) }
+
+.players { margin-top:12px }
+.players ul {
+  list-style:none; max-height:360px; overflow-y:auto; margin-top:10px; padding:0;
+}
+.players li {
+  display:flex; gap:10px; align-items:center; padding:8px; border-radius:10px;
+  background: rgba(255,255,255,0.03); margin-bottom:8px; font-size:14px;
+  transition: background 0.3s;
+}
+.players li:hover { background: rgba(255,255,255,0.06) }
+.avatar { width:34px; height:34px; border-radius:6px; flex-shrink:0; background-size:cover; background-position:center; }
+.empty { padding:14px; text-align:center; color:rgba(255,255,255,0.6); font-size:14px }
+
+.sidebar .card { display:flex; flex-direction:column; gap:12px; padding:18px }
+.countdown { display:flex; justify-content:space-between; align-items:center; margin-top:6px; font-size:13px; }
+.progress { width:100%; height:8px; background:rgba(255,255,255,0.06); border-radius:999px; overflow:hidden; margin-top:8px; }
+.progress>i { display:block; width:0%; height:100%; background: linear-gradient(90deg, #1f8fff, #4aa3ff); transition: width 0.3s linear; }
+
+.chat-box { background: rgba(0,0,0,0.18); border-radius:10px; padding:10px; font-size:13px; height:240px; overflow-y:auto; }
+.btn { padding:10px; border-radius:var(--btn-radius); font-weight:600; font-size:14px; cursor:pointer; border:none; transition:background 0.2s; }
+.btn.primary { background:var(--accent); color:#fff }
+.btn.secondary { background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.1) }
+.btn.visit { background: rgba(255,255,255,0.1); color:#fff }
+.btn:hover { background: var(--hover-btn) }
+
+@media (max-width:880px){ .wrap{ grid-template-columns:1fr } .sidebar{ order:2 } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <!-- Main card -->
+  <div class="card">
+    <header class="app">
+      <div class="logo">RC</div>
+      <div><h1>RavenClaw — Server Status</h1></div>
+    </header>
+
+    <div class="status-row">
+      <div id="statusPill" class="pill">Loading…</div>
+      <div class="pill">Version: <span id="ver" style="margin-left:8px;font-weight:700">—</span></div>
+      <div class="pill">Ping: <span id="ping" style="margin-left:8px;font-weight:700">—</span> ms</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="meta">
+        <div class="label">MOTD</div>
+        <div class="val" id="motd">—</div>
+      </div>
+      <div class="meta">
+        <div class="label">Players</div>
+        <div class="val"><span id="playersCount">—</span></div>
+      </div>
+    </div>
+
+    <div class="players">
+      <strong>Daftar Pemain</strong>
+      <ul id="playerList"><li class="empty">Loading player list…</li></ul>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar card">
+    <div style="font-weight:700; color:var(--accent)">Kontrol & Info</div>
+
+    <div class="countdown">
+      <div>Next update in <span id="cd">10</span>s</div>
+    </div>
+    <div class="progress"><i id="progressBar"></i></div>
+
+    <div style="font-weight:600; margin-top:8px">Latency: <span id="latText">—</span> ms</div>
+    <div style="font-weight:600">Server Version: <span id="ver2">—</span></div>
+
+    <div style="margin-top:8px">
+      <div class="muted">Chat (preview)</div>
+      <div id="chatBox" class="chat-box">
+        <div class="muted">Realtime chat opsional.</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
+      <button id="refreshNow" class="btn primary">Refresh</button>
+      <button id="openMC" class="btn secondary">Open MC</button>
+      <button id="tiktokBtn" class="btn visit">TikTok</button>
+      <button id="whatsappBtn" class="btn visit">WhatsApp</button>
+    </div>
+  </aside>
+</div>
+
+<script>
+const HOST="sg1.gensstore.biz.id", PORT=19132;
+const API_URL=`https://api.mcstatus.io/v2/status/java/${HOST}:${PORT}`;
+const REFRESH_INTERVAL=10;
+
+const statusPill=document.getElementById("statusPill"),
+      motdEl=document.getElementById("motd"),
+      verEl=document.getElementById("ver"),
+      verEl2=document.getElementById("ver2"),
+      pingEl=document.getElementById("ping"),
+      latText=document.getElementById("latText"),
+      playersCount=document.getElementById("playersCount"),
+      playerList=document.getElementById("playerList"),
+      chatBox=document.getElementById("chatBox"),
+      cdEl=document.getElementById("cd"),
+      progressBar=document.getElementById("progressBar");
+
+document.getElementById("openMC").onclick = ()=>window.open("https://minecraft.net/en-us/get-minecraft","_blank");
+document.getElementById("tiktokBtn").onclick = ()=>window.open("https://www.tiktok.com/@ravenclawarea","_blank");
+document.getElementById("whatsappBtn").onclick = ()=>window.open("https://chat.whatsapp.com/EmQWwfuATGUAqCAvwQJx4i","_blank");
+document.getElementById("refreshNow").onclick = ()=>{fetchAndRender(); resetCountdown();};
+
+function parseMotd(m){if(!m)return"—"; if(m.clean)return Array.isArray(m.clean)?m.clean.join(" "):m.clean; if(m.raw)return Array.isArray(m.raw)?m.raw.join(" "):m.raw; return String(m)}
+function setOnlineUI(o){statusPill.classList.toggle("online",o); statusPill.classList.toggle("offline",!o); statusPill.innerText=o?"✅ ONLINE":"❌ OFFLINE"; if(!o){pingEl.innerText="—"; latText.innerText="—"; verEl.innerText="—"; verEl2.innerText="—";}}
+function renderPlayers(list,on,max){playersCount.innerText=`${on}/${max}`; playerList.innerHTML=""; if(!Array.isArray(list)||list.length===0){const li=document.createElement("li"); li.className="empty"; li.innerText=on===0?"No players online":"No player names"; playerList.appendChild(li); return;}
+list.forEach(p=>{const name=(p&&(p.name_clean||p.name||p))||String(p); const li=document.createElement("li"); const avatar=document.createElement("div"); avatar.className="avatar"; const hue=(name.charCodeAt(0)*37)%360; avatar.style.background=`linear-gradient(135deg,hsl(${hue} 70% 35%),hsl(${(hue+60)%360} 70% 45%))`; avatar.title=name; const span=document.createElement("div"); span.innerText=name; li.append(avatar,span); playerList.appendChild(li);})}
+function appendChat(t){const d=document.createElement("div"); d.style.padding="6px 0"; d.style.fontSize="13px"; d.style.opacity=0.95; d.innerText=`[${new Date().toLocaleTimeString()}] ${t}`; chatBox.appendChild(d); if(chatBox.children.length>120) chatBox.removeChild(chatBox.firstChild); chatBox.scrollTop=chatBox.scrollHeight;}
+
+async function fetchAndRender(){try{
+  const res=await fetch(API_URL,{cache:"no-store"}); if(!res.ok) throw new Error("HTTP "+res.status);
+  const data=await res.json();
+  const online=!!data.online; setOnlineUI(online);
+  motdEl.innerText=parseMotd(data.motd);
+  const versionName=data.version?.name||data.version?.protocol?(data.version.name||"—"):"—"; verEl.innerText=versionName; verEl2.innerText=versionName;
+  const latency=typeof data.latency==="number"?Math.round(data.latency):"—"; pingEl.innerText=latency; latText.innerText=latency;
+  const players=data.players||{}; renderPlayers(players.list||[],players.online??0,players.max??0);
+  appendChat(`[system] status ${online?"ONLINE":"OFFLINE"} • ${players.online}/${players.max} players`);
+}catch(err){console.error("Fetch error:",err); setOnlineUI(false); motdEl.innerText="—"; verEl.innerText="—"; playersCount.innerText="—"; playerList.innerHTML=`<li class="empty">Gagal ambil data</li>`; appendChat(`[error] ${err.message||err}`);}
+}
+
+let countdown=REFRESH_INTERVAL, interval;
+function resetCountdown(){countdown=REFRESH_INTERVAL; cdEl.innerText=countdown; updateProgress();}
+function updateProgress(){progressBar.style.width=`${((REFRESH_INTERVAL-countdown)/REFRESH_INTERVAL)*100}%`;}
+function startLoop(){clearInterval(interval); resetCountdown(); interval=setInterval(()=>{countdown=Math.max(0,countdown-1); cdEl.innerText=countdown; updateProgress(); if(countdown===0){fetchAndRender(); resetCountdown();}},1000);}
+
+// Auto messages tiap 15 detik
+const autoMessages=[
+  "Jangan lupa follow TikTok kami!",
+  "Gabung grup WhatsApp kami untuk info terbaru!"
+];
+let autoIndex=0;
+setInterval(()=>{appendChat(autoMessages[autoIndex]); autoIndex=(autoIndex+1)%autoMessages.length;},15000);
+
+(function init(){fetchAndRender(); startLoop(); setInterval(updateProgress,250);})();
+</script>
+</body>
+</html>
