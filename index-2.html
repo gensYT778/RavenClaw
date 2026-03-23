@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SALLGEN ID — Toko Robux Murah & Terpercaya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Righteous&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════════════════
+   THEME VARIABLES
+══════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  --bg:           #0c0510;
+  --bg2:          #130a1a;
+  --bg3:          #1a0d24;
+  --card-bg:      #160c20;
+  --card-border:  rgba(233,30,99,0.18);
+  --card-hover:   rgba(233,30,99,0.35);
+  --nav-bg:       rgba(12,5,16,0.88);
+  --text:         #f8eeff;
+  --text-2:       #c9a8db;
+  --text-3:       #7a5b8a;
+  --accent:       #f72585;
+  --accent2:      #c9184a;
+  --accent3:      #ff85b3;
+  --accent-soft:  rgba(247,37,133,0.12);
+  --accent-mid:   rgba(247,37,133,0.25);
+  --glow:         rgba(247,37,133,0.4);
+  --glow-soft:    rgba(247,37,133,0.15);
+  --btn-text:     #ffffff;
+  --shadow:       0 20px 60px rgba(0,0,0,0.6);
+  --shadow-sm:    0 4px 20px rgba(0,0,0,0.4);
+  --badge-pop:    #f72585;
+  --badge-hemat:  #7b2d8b;
+  --badge-gift:   #e65100;
+  --star:         #f7b731;
+  --input-bg:     rgba(255,255,255,0.05);
+  --input-border: rgba(247,37,133,0.3);
+  --step-bg:      #1e0e2d;
+  --faq-bg:       #160c20;
+  --footer-bg:    #0a0410;
+  --toggle-bg:    rgba(255,255,255,0.07);
+  --toggle-active: linear-gradient(135deg,#f72585,#c9184a);
+}
+
+[data-theme="light"] {
+  --bg:           #fff0f6;
+  --bg2:          #ffe3ef;
+  --bg3:          #ffd6e7;
+  --card-bg:      #ffffff;
+  --card-border:  rgba(215,20,90,0.15);
+  --card-hover:   rgba(215,20,90,0.3);
+  --nav-bg:       rgba(255,240,246,0.9);
+  --text:         #1a0a10;
+  --text-2:       #6d2040;
+  --text-3:       #b07090;
+  --accent:       #d7145a;
+  --accent2:      #a00040;
+  --accent3:      #f472b6;
+  --accent-soft:  rgba(215,20,90,0.08);
+  --accent-mid:   rgba(215,20,90,0.18);
+  --glow:         rgba(215,20,90,0.3);
+  --glow-soft:    rgba(215,20,90,0.1);
+  --btn-text:     #ffffff;
+  --shadow:       0 20px 60px rgba(200,30,80,0.1);
+  --shadow-sm:    0 4px 20px rgba(200,30,80,0.08);
+  --badge-pop:    #d7145a;
+  --badge-hemat:  #7b2d8b;
+  --badge-gift:   #e65100;
+  --star:         #f59e0b;
+  --input-bg:     rgba(215,20,90,0.05);
+  --input-border: rgba(215,20,90,0.25);
+  --step-bg:      #fce8f0;
+  --faq-bg:       #ffffff;
+  --footer-bg:    #1a0a10;
+  --toggle-bg:    rgba(215,20,90,0.08);
+  --toggle-active: linear-gradient(135deg,#d7145a,#a00040);
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Sora',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:background .35s,color .35s;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+/* Ambient BG blobs */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 55% 40% at 5% 5%, var(--glow-soft), transparent 65%),
+    radial-gradient(ellipse 40% 35% at 95% 90%, rgba(121,40,202,0.12), transparent 65%);
+  transition:background .35s;
+}
+
+.container{max-width:1160px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+
+/* ══════════════════════════════════════════════════════════
+   SCROLLBAR
+══════════════════════════════════════════════════════════ */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+
+/* ══════════════════════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════════════════════ */
+#navbar{
+  position:sticky;top:0;z-index:200;
+  background:var(--nav-bg);
+  backdrop-filter:blur(20px) saturate(1.6);
+  -webkit-backdrop-filter:blur(20px) saturate(1.6);
+  border-bottom:1px solid var(--card-border);
+  padding:0;
+  transition:background .35s,border-color .35s;
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;gap:12px;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  text-decoration:none;color:var(--text);flex-shrink:0;
+}
+.logo-box{
+  width:36px;height:36px;border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;box-shadow:0 4px 16px var(--glow);
+}
+.logo-text{
+  font-family:'Righteous',cursive;font-size:20px;letter-spacing:0.5px;
+}
+.logo-text span{color:var(--accent)}
+
+.nav-links{
+  display:flex;align-items:center;gap:4px;
+  list-style:none;
+}
+.nav-links a{
+  font-size:13.5px;font-weight:500;color:var(--text-2);
+  text-decoration:none;padding:7px 13px;border-radius:99px;
+  transition:all .25s;
+}
+.nav-links a:hover{color:var(--text);background:var(--accent-soft)}
+
+.nav-right{display:flex;align-items:center;gap:10px}
+
+/* Theme Toggle */
+.theme-toggle{
+  display:flex;align-items:center;
+  background:var(--toggle-bg);
+  border:1px solid var(--card-border);
+  border-radius:99px;padding:3px;gap:2px;
+}
+.t-btn{
+  font-family:'Sora',sans-serif;
+  font-size:12px;font-weight:600;border:none;cursor:pointer;
+  padding:6px 13px;border-radius:99px;
+  color:var(--text-3);background:transparent;
+  transition:all .25s;display:flex;align-items:center;gap:5px;
+  white-space:nowrap;
+}
+.t-btn.on{
+  background:var(--toggle-active);
+  color:#fff;box-shadow:0 2px 12px var(--glow);
+}
+
+/* Hamburger */
+.ham{
+  display:none;background:none;border:none;
+  cursor:pointer;flex-direction:column;gap:5px;padding:4px;
+}
+.ham span{
+  display:block;width:22px;height:2px;
+  background:var(--text);border-radius:2px;transition:all .3s;
+}
+
+/* Mobile Menu */
+.mobile-menu{
+  display:none;position:fixed;
+  top:65px;left:0;right:0;z-index:199;
+  background:var(--nav-bg);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--card-border);
+  padding:16px 20px;
+}
+.mobile-menu.open{display:block}
+.mobile-menu a{
+  display:block;padding:11px 8px;
+  font-size:15px;font-weight:500;color:var(--text-2);
+  text-decoration:none;border-bottom:1px solid var(--card-border);
+  transition:color .2s;
+}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a:hover{color:var(--accent)}
+
+/* ══════════════════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════════════════ */
+#home{padding:80px 0 64px}
+
+.hero-wrap{
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:48px;
+}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent-soft);border:1px solid var(--card-hover);
+  border-radius:99px;padding:6px 16px;margin-bottom:22px;
+  font-size:12.5px;font-weight:600;color:var(--accent3);letter-spacing:0.3px;
+}
+.hero-badge::before{
+  content:'';width:8px;height:8px;background:var(--accent);
+  border-radius:50%;box-shadow:0 0 8px var(--accent);
+  animation:blink 1.4s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+
+.hero h1{
+  font-family:'Righteous',cursive;
+  font-size:clamp(34px,4.5vw,58px);
+  line-height:1.1;letter-spacing:-0.5px;margin-bottom:18px;
+}
+.hero h1 .pink{
+  background:linear-gradient(120deg,var(--accent),var(--accent3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+.hero-desc{
+  font-size:16px;color:var(--text-2);margin-bottom:30px;
+  font-weight:300;max-width:520px;margin-left:auto;margin-right:auto;
+}
+
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;justify-content:center}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 28px;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;font-size:14.5px;font-weight:700;
+  text-decoration:none;border:none;cursor:pointer;
+  font-family:'Sora',sans-serif;
+  transition:all .25s;box-shadow:0 6px 24px var(--glow);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 32px var(--glow)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:14px;
+  background:transparent;border:1.5px solid var(--card-hover);
+  color:var(--text);font-size:14.5px;font-weight:600;
+  text-decoration:none;cursor:pointer;font-family:'Sora',sans-serif;
+  transition:all .25s;
+}
+.btn-secondary:hover{background:var(--accent-soft);border-color:var(--accent)}
+
+.hero-stats{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.stat{padding:12px 18px;background:var(--accent-soft);border:1px solid var(--card-border);border-radius:14px}
+.stat-n{font-family:'Righteous',cursive;font-size:22px;color:var(--accent);display:block;line-height:1}
+.stat-l{font-size:11px;color:var(--text-3);font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-top:3px}
+
+/* Hero visual */
+.hero-visual{
+  display:flex;justify-content:center;align-items:center;
+  position:relative;
+}
+.hero-card-float{
+  background:linear-gradient(145deg,var(--bg2),var(--bg3));
+  border:1px solid var(--card-border);
+  border-radius:24px;padding:32px;width:100%;max-width:340px;
+  box-shadow:var(--shadow);
+  animation:float 4s ease-in-out infinite;
+  position:relative;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-card-float::before{
+  content:'';position:absolute;inset:-1px;border-radius:25px;
+  background:linear-gradient(145deg,var(--accent),transparent,var(--accent2));
+  z-index:-1;opacity:0.3;
+}
+.hcf-header{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.hcf-icon{font-size:36px}
+.hcf-title{font-family:'Righteous',cursive;font-size:18px;color:var(--text)}
+.hcf-sub{font-size:12px;color:var(--text-3)}
+.hcf-amount{
+  font-family:'Righteous',cursive;font-size:42px;
+  color:var(--accent);text-align:center;margin:16px 0;
+  text-shadow:0 0 30px var(--glow);
+}
+.hcf-amount small{font-size:18px;color:var(--text-2)}
+.hcf-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-top:1px solid var(--card-border)}
+.hcf-lbl{font-size:13px;color:var(--text-3)}
+.hcf-val{font-size:13px;font-weight:600;color:var(--text)}
+.hcf-pill{
+  display:inline-block;background:rgba(39,174,96,0.15);
+  color:#2ecc71;font-size:11px;font-weight:700;
+  padding:2px 8px;border-radius:99px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   SECTION HEADER
+══════════════════════════════════════════════════════════ */
+.sec-head{text-align:center;margin-bottom:40px}
+.sec-head h2{
+  font-family:'Righteous',cursive;font-size:clamp(24px,3vw,36px);
+  margin-bottom:8px;
+}
+.sec-head p{font-size:15px;color:var(--text-2);font-weight:300}
+.sec-line{
+  width:56px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent3));
+  border-radius:2px;margin:12px auto 0;
+}
+
+/* ══════════════════════════════════════════════════════════
+   METHOD TABS
+══════════════════════════════════════════════════════════ */
+#harga-robux{padding:72px 0 24px}
+
+.method-tabs{
+  display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;
+}
+.m-tab{
+  display:flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:14px;
+  background:var(--accent-soft);border:1.5px solid var(--card-border);
+  color:var(--text-2);font-size:14px;font-weight:600;
+  cursor:pointer;transition:all .25s;font-family:'Sora',sans-serif;
+}
+.m-tab:hover{border-color:var(--accent);color:var(--text)}
+.m-tab.active{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border-color:transparent;color:#fff;
+  box-shadow:0 6px 20px var(--glow);transform:translateY(-2px);
+}
+.m-tab .ti{font-size:18px}
+.m-tab .tc{font-size:10px;font-weight:700;padding:2px 7px;background:rgba(255,255,255,0.2);border-radius:99px;letter-spacing:0.3px}
+
+/* Method Info Banner */
+.m-info{
+  background:var(--bg2);border:1px solid var(--card-border);
+  border-radius:18px;padding:18px 22px;
+  display:flex;align-items:flex-start;gap:16px;
+  margin-bottom:28px;box-shadow:var(--shadow-sm);
+}
+.m-info-icon{font-size:32px;flex-shrink:0;margin-top:3px}
+.m-info-body h4{font-family:'Righteous',cursive;font-size:16px;margin-bottom:5px}
+.m-info-body p{font-size:13px;color:var(--text-2);line-height:1.6}
+.m-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.m-tag{
+  font-size:11.5px;font-weight:600;padding:3px 10px;
+  border-radius:99px;letter-spacing:0.2px;
+}
+.tag-instant{background:rgba(247,37,133,0.15);color:#f72585}
+.tag-hemat{background:rgba(123,45,139,0.15);color:#c07fd0}
+.tag-gift{background:rgba(230,81,0,0.15);color:#f59c4a}
+.tag-ok{background:rgba(46,204,113,0.12);color:#2ecc71}
+
+/* Panel */
+.m-panel{display:none}
+.m-panel.show{display:block}
+
+/* ══════════════════════════════════════════════════════════
+   PRODUCT GRID
+══════════════════════════════════════════════════════════ */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:16px;
+}
+
+.p-card{
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:20px;padding:22px 18px;
+  position:relative;overflow:hidden;
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+  cursor:pointer;
+}
+.p-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(145deg,var(--glow-soft),transparent);
+  opacity:0;transition:opacity .3s;pointer-events:none;
+}
+.p-card:hover{
+  border-color:var(--accent);
+  transform:translateY(-5px);
+  box-shadow:var(--shadow),0 0 0 1px var(--accent);
+}
+.p-card:hover::before{opacity:1}
+.p-card.hot{border-color:var(--accent);box-shadow:0 0 20px var(--glow-soft)}
+
+.hot-badge{
+  position:absolute;top:0;right:16px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;font-size:10px;font-weight:800;
+  padding:4px 10px;border-radius:0 0 10px 10px;
+  letter-spacing:0.5px;
+}
+
+.p-icon{
+  width:50px;height:50px;border-radius:14px;
+  background:var(--accent-soft);border:1px solid var(--card-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;margin-bottom:14px;
+}
+.p-amount{
+  font-family:'Righteous',cursive;font-size:20px;
+  margin-bottom:4px;display:flex;align-items:baseline;gap:5px;
+}
+.p-amount .rbx{font-size:12px;color:var(--accent);font-family:'Sora',sans-serif;font-weight:700}
+.p-bonus{
+  display:inline-block;background:var(--accent-soft);color:var(--accent3);
+  font-size:11px;font-weight:700;padding:2px 9px;
+  border-radius:99px;margin-bottom:10px;
+}
+.p-price{
+  font-family:'Righteous',cursive;font-size:22px;color:var(--accent);margin-bottom:3px;
+}
+.p-price-sub{font-size:11.5px;color:var(--text-3);margin-bottom:14px}
+.p-features{list-style:none;margin-bottom:16px}
+.p-features li{
+  font-size:12.5px;color:var(--text-2);padding:3px 0;
+  display:flex;align-items:center;gap:7px;
+}
+.p-features li::before{content:'✓';color:var(--accent);font-weight:700;font-size:11px;flex-shrink:0}
+
+.p-btn{
+  width:100%;padding:11px;border-radius:12px;border:none;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;font-size:13.5px;font-weight:700;cursor:pointer;
+  font-family:'Sora',sans-serif;transition:all .25s;letter-spacing:0.2px;
+}
+.p-btn:hover{transform:scale(1.02);box-shadow:0 6px 20px var(--glow)}
+
+/* ══════════════════════════════════════════════════════════
+   GIFT CARD SECTION
+══════════════════════════════════════════════════════════ */
+#gift-card{padding:24px 0 72px}
+
+/* ══════════════════════════════════════════════════════════
+   HOW TO ORDER
+══════════════════════════════════════════════════════════ */
+#cara-order{padding:72px 0}
+.steps-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;
+}
+.step-card{
+  background:var(--step-bg);border:1px solid var(--card-border);
+  border-radius:20px;padding:28px 22px;text-align:center;
+  transition:all .3s;position:relative;
+}
+.step-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.step-num{
+  width:46px;height:46px;border-radius:14px;margin:0 auto 14px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Righteous',cursive;font-size:20px;color:#fff;
+  box-shadow:0 6px 20px var(--glow);
+}
+.step-icon{font-size:24px;margin-bottom:8px}
+.step-card h4{font-family:'Righteous',cursive;font-size:15.5px;margin-bottom:8px}
+.step-card p{font-size:13px;color:var(--text-2);line-height:1.6}
+.step-arrow{
+  position:absolute;top:50%;right:-14px;transform:translateY(-50%);
+  width:28px;height:28px;background:var(--accent);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:14px;z-index:2;
+  box-shadow:0 2px 8px var(--glow);
+}
+
+/* ══════════════════════════════════════════════════════════
+   METODE PEMBELIAN INFO
+══════════════════════════════════════════════════════════ */
+#metode{padding:72px 0}
+.metode-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.met-card{
+  background:var(--card-bg);border:1px solid var(--card-border);
+  border-radius:22px;padding:30px 26px;transition:all .3s;
+}
+.met-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+.met-header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.met-icon{
+  width:52px;height:52px;border-radius:15px;
+  display:flex;align-items:center;justify-content:center;font-size:26px;
+  flex-shrink:0;
+}
+.met-icon.instant{background:rgba(247,37,133,0.15)}
+.met-icon.hemat{background:rgba(123,45,139,0.15)}
+.met-icon.gift{background:rgba(230,81,0,0.15)}
+.met-title{font-family:'Righteous',cursive;font-size:18px}
+.met-sub{font-size:12px;color:var(--text-3);margin-top:2px}
+.met-list{list-style:none}
+.met-list li{
+  font-size:13.5px;color:var(--text-2);
+  padding:6px 0;border-bottom:1px solid var(--card-border);
+  display:flex;align-items:flex-start;gap:10px;line-height:1.5;
+}
+.met-list li:last-child{border-bottom:none}
+.met-list li::before{content:'→';color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ══════════════════════════════════════════════════════════
+   KONTAK
+══════════════════════════════════════════════════════════ */
+#kontak{padding:72px 0}
+.kontak-inner{
+  max-width:620px;margin:0 auto;text-align:center;
+}
+.kontak-card{
+  background:var(--card-bg);border:1px solid var(--card-border);
+  border-radius:24px;padding:48px 36px;
+  box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.kontak-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(145deg,var(--glow-soft),transparent);
+  pointer-events:none;
+}
+.kontak-icon{font-size:52px;margin-bottom:16px;display:block}
+.kontak-card h3{font-family:'Righteous',cursive;font-size:26px;margin-bottom:10px}
+.kontak-card p{font-size:14px;color:var(--text-2);margin-bottom:28px;line-height:1.7}
+.wa-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 36px;border-radius:16px;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:#fff;font-size:16px;font-weight:700;
+  text-decoration:none;transition:all .25s;
+  box-shadow:0 8px 24px rgba(37,211,102,0.35);
+  font-family:'Sora',sans-serif;
+}
+.wa-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,211,102,0.45)}
+.kontak-detail{
+  display:flex;justify-content:center;gap:28px;
+  flex-wrap:wrap;margin-top:28px;
+}
+.kd-item{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--text-2)}
+.kd-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;}
+
+/* ══════════════════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════════════════ */
+footer{
+  background:var(--footer-bg);
+  border-top:1px solid var(--card-border);
+  padding:44px 0 28px;
+  margin-top:40px;
+}
+.footer-inner{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:36px;
+}
+.footer-logo-text{font-family:'Righteous',cursive;font-size:22px;margin-bottom:10px}
+.footer-logo-text span{color:var(--accent)}
+.footer-about{font-size:13px;color:var(--text-3);line-height:1.7;max-width:280px}
+.footer-col h5{font-family:'Righteous',cursive;font-size:14px;margin-bottom:14px;color:var(--text)}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:8px}
+.footer-col a{font-size:13px;color:var(--text-3);text-decoration:none;transition:color .2s}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{
+  border-top:1px solid var(--card-border);padding-top:20px;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:8px;
+}
+.footer-bottom p{font-size:12.5px;color:var(--text-3)}
+.footer-bottom .heart{color:var(--accent)}
+
+/* ══════════════════════════════════════════════════════════
+   TRENDING
+══════════════════════════════════════════════════════════ */
+.trending-banner{
+  background:linear-gradient(135deg,rgba(247,37,133,0.12),rgba(121,40,202,0.1));
+  border:1px solid rgba(247,37,133,0.3);
+  border-radius:20px;padding:20px 24px;
+  margin-bottom:32px;
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  position:relative;overflow:hidden;
+}
+.trending-banner::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(247,37,133,0.06),transparent);
+  animation:shimmer 2.5s infinite;
+}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.tb-icon{font-size:32px;animation:float 2s ease-in-out infinite}
+.tb-body{flex:1;min-width:200px}
+.tb-title{
+  font-family:'Righteous',cursive;font-size:17px;margin-bottom:4px;
+  display:flex;align-items:center;gap:8px;
+}
+.tb-title .live-dot{
+  width:8px;height:8px;background:#f72585;border-radius:50%;
+  box-shadow:0 0 8px #f72585;animation:blink 1.2s ease-in-out infinite;flex-shrink:0;
+}
+.tb-desc{font-size:13px;color:var(--text-2)}
+.tb-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tb-pill{
+  display:flex;align-items:center;gap:6px;
+  background:var(--card-bg);border:1px solid var(--card-border);
+  border-radius:12px;padding:8px 14px;font-size:13px;font-weight:600;
+  transition:all .25s;cursor:pointer;text-decoration:none;color:var(--text);
+}
+.tb-pill:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.tb-pill .pill-icon{font-size:16px}
+.tb-pill .pill-badge{
+  font-size:10px;font-weight:700;padding:1px 6px;border-radius:99px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+}
+.trending-badge{
+  position:absolute;top:0;left:16px;
+  background:linear-gradient(135deg,#ff6b35,#f7931e);
+  color:#fff;font-size:10px;font-weight:800;
+  padding:4px 10px;border-radius:0 0 10px 10px;
+  letter-spacing:0.5px;z-index:2;
+  right:unset;
+}
+.p-card.trending{
+  border-color:rgba(255,107,53,0.5);
+  box-shadow:0 0 20px rgba(255,107,53,0.15);
+}
+.p-card.trending:hover{
+  border-color:#ff6b35;
+  box-shadow:var(--shadow),0 0 0 1px #ff6b35;
+}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ══════════════════════════════════════════════════════════
+   ORDER TICKER
+══════════════════════════════════════════════════════════ */
+.ticker-wrap{
+  overflow:hidden;background:var(--accent-soft);
+  border-bottom:1px solid var(--card-border);
+  padding:9px 0;
+}
+.ticker-track{
+  display:flex;animation:ticker 35s linear infinite;width:max-content;
+}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:0 28px;font-size:12.5px;color:var(--text-2);
+  white-space:nowrap;border-right:1px solid var(--card-border);
+}
+.ticker-item .t-dot{
+  width:7px;height:7px;background:#2ecc71;border-radius:50%;
+  box-shadow:0 0 6px #2ecc71;flex-shrink:0;
+}
+.ticker-item strong{color:var(--text)}
+
+/* ══════════════════════════════════════════════════════════
+   TRUST BAR
+══════════════════════════════════════════════════════════ */
+.trust-bar{
+  display:flex;align-items:center;justify-content:center;
+  gap:10px;flex-wrap:wrap;padding:22px 0;
+  border-bottom:1px solid var(--card-border);
+}
+.trust-item{
+  display:flex;align-items:center;gap:8px;
+  padding:9px 18px;border-radius:99px;
+  background:var(--card-bg);border:1px solid var(--card-border);
+  font-size:13px;font-weight:600;color:var(--text-2);
+  transition:all .25s;
+}
+.trust-item:hover{border-color:var(--accent);color:var(--text);transform:translateY(-1px)}
+
+/* ══════════════════════════════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════════════════════════════ */
+.testi-section{padding:72px 0}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.testi-card{
+  background:var(--card-bg);border:1px solid var(--card-border);
+  border-radius:20px;padding:22px;transition:all .3s;
+}
+.testi-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+.testi-stars{color:var(--star);font-size:14px;letter-spacing:2px;margin-bottom:10px}
+.testi-text{
+  font-size:13.5px;color:var(--text-2);line-height:1.7;
+  margin-bottom:16px;font-style:italic;
+}
+.testi-user{display:flex;align-items:center;gap:10px}
+.testi-avatar{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;font-size:17px;
+}
+.testi-name{font-size:13.5px;font-weight:700}
+.testi-meta{font-size:11.5px;color:var(--text-3);margin-top:2px;display:flex;align-items:center;gap:5px}
+.testi-method{font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:99px;background:var(--accent-soft);color:var(--accent3)}
+.testi-verified{color:#2ecc71;font-size:11px}
+
+/* ══════════════════════════════════════════════════════════
+   FAQ
+══════════════════════════════════════════════════════════ */
+.faq-section{padding:0 0 72px}
+.faq-wrap{max-width:740px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq-item{
+  background:var(--faq-bg);border:1px solid var(--card-border);
+  border-radius:16px;overflow:hidden;transition:border-color .25s;
+}
+.faq-item.open{border-color:var(--accent)}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:16px 20px;background:none;border:none;cursor:pointer;
+  color:var(--text);font-size:14.5px;font-weight:600;text-align:left;
+  font-family:'Sora',sans-serif;transition:color .2s;gap:12px;
+}
+.faq-q:hover{color:var(--accent)}
+.faq-arrow{
+  width:24px;height:24px;border-radius:7px;flex-shrink:0;
+  background:var(--accent-soft);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;transition:transform .3s;
+}
+.faq-item.open .faq-arrow{transform:rotate(90deg)}
+.faq-a{
+  font-size:13.5px;color:var(--text-2);line-height:1.7;
+  max-height:0;overflow:hidden;
+  transition:max-height .35s ease,padding .3s ease;
+  padding:0 20px;
+}
+.faq-item.open .faq-a{max-height:300px;padding:0 20px 18px}
+
+/* ══════════════════════════════════════════════════════════
+   COMPARISON TABLE
+══════════════════════════════════════════════════════════ */
+.compare-section{padding:72px 0 0}
+.compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.compare-table{width:100%;border-collapse:collapse;min-width:580px;}
+.compare-table th{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-family:'Righteous',cursive;font-size:14px;padding:14px 18px;text-align:center;}
+.compare-table th:first-child{text-align:left;border-radius:14px 0 0 0;}
+.compare-table th:last-child{border-radius:0 14px 0 0;}
+.compare-table td{padding:13px 18px;font-size:13.5px;border-bottom:1px solid var(--card-border);background:var(--card-bg);color:var(--text-2);text-align:center;}
+.compare-table td:first-child{text-align:left;font-weight:600;color:var(--text);}
+.compare-table tr:last-child td:first-child{border-radius:0 0 0 14px;}
+.compare-table tr:last-child td:last-child{border-radius:0 0 14px 0;}
+.compare-table tr:hover td{background:var(--accent-soft);}
+.compare-ok{color:#2ecc71;font-weight:700;}
+.compare-no{color:#e74c3c;font-weight:700;}
+.compare-warn{color:var(--star);font-weight:600;}
+
+/* ══════════════════════════════════════════════════════════
+   COUNTDOWN / JAM OPERASIONAL
+══════════════════════════════════════════════════════════ */
+.ops-section{padding:28px 0 72px}
+.ops-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:20px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;max-width:820px;margin:0 auto;box-shadow:var(--shadow-sm);}
+.ops-left h4{font-family:'Righteous',cursive;font-size:18px;margin-bottom:6px;}
+.ops-left p{font-size:13px;color:var(--text-2);}
+.ops-status{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;margin-top:8px;}
+.ops-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.ops-dot.online{background:#2ecc71;box-shadow:0 0 8px #2ecc71;animation:blink 1.5s infinite;}
+.ops-dot.offline{background:#e74c3c;}
+.ops-dot.soon{background:var(--star);box-shadow:0 0 8px var(--star);animation:blink 1.5s infinite;}
+.ops-right{display:flex;gap:12px;flex-wrap:wrap;}
+.ops-box{text-align:center;background:var(--accent-soft);border:1px solid var(--card-border);border-radius:14px;padding:12px 18px;min-width:70px;}
+.ops-num{font-family:'Righteous',cursive;font-size:28px;color:var(--accent);display:block;line-height:1;}
+.ops-lbl{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.5px;margin-top:3px;}
+
+/* ══════════════════════════════════════════════════════════
+   DIGITAL PRODUK BUTTON & FLOATING WA
+══════════════════════════════════════════════════════════ */
+.dp-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 34px;border-radius:16px;background:linear-gradient(135deg,#7b2ff7,#4a1fa8);color:#fff;font-size:15.5px;font-weight:700;text-decoration:none;transition:all .25s;box-shadow:0 8px 24px rgba(123,47,247,0.35);font-family:'Sora',sans-serif;margin-top:12px;}
+.dp-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(123,47,247,0.45);}
+.kontak-btns{display:flex;flex-direction:column;align-items:center;gap:0;}
+.float-wa{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25D366,#128C7E);display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,0.5);transition:all .25s;}
+.float-wa:hover{transform:scale(1.12);box-shadow:0 10px 32px rgba(37,211,102,0.6);}
+.float-wa-pulse{position:absolute;inset:0;border-radius:50%;background:rgba(37,211,102,0.4);animation:pulse-ring 2s ease-out infinite;}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:0.6}100%{transform:scale(1.7);opacity:0}}
+
+/* ══════════════════════════════════════════════════════════
+   SYARAT & KETENTUAN MODAL
+══════════════════════════════════════════════════════════ */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:var(--card-bg);border:1px solid var(--card-border);border-radius:24px;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,0.5),0 0 40px var(--glow-soft);animation:modalIn .3s cubic-bezier(.34,1.56,.64,1);}
+@keyframes modalIn{from{opacity:0;transform:scale(0.92) translateY(20px)}to{opacity:1;transform:none}}
+.modal-head{display:flex;align-items:center;justify-content:space-between;padding:22px 26px;border-bottom:1px solid var(--card-border);position:sticky;top:0;background:var(--card-bg);z-index:1;border-radius:24px 24px 0 0;}
+.modal-head h3{font-family:'Righteous',cursive;font-size:18px;}
+.modal-close-btn{width:32px;height:32px;border-radius:50%;background:var(--accent-soft);border:none;cursor:pointer;color:var(--text-2);font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.modal-close-btn:hover{background:var(--accent);color:#fff;}
+.modal-body{padding:24px 26px;}
+.modal-body h5{font-family:'Righteous',cursive;font-size:14px;color:var(--accent);margin:18px 0 8px;}
+.modal-body h5:first-child{margin-top:0;}
+.modal-body p,.modal-body li{font-size:13.5px;color:var(--text-2);line-height:1.75;}
+.modal-body ul{padding-left:18px;display:flex;flex-direction:column;gap:4px;}
+.modal-body .sk-divider{height:1px;background:var(--card-border);margin:16px 0;}
+.sk-link{color:var(--accent3);font-size:13px;cursor:pointer;font-weight:600;background:none;border:none;font-family:'Sora',sans-serif;text-decoration:underline;}
+.sk-link:hover{color:var(--accent);}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════ */
+@media(max-width:960px){
+  .hero-wrap{grid-template-columns:1fr;text-align:center}
+  .hero-visual{order:-1}
+  .hero-badge{display:inline-flex}
+  .hero-desc{margin:0 auto 30px}
+  .hero-cta{justify-content:center}
+  .hero-stats{justify-content:center}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .ham{display:flex}
+  #home{padding:56px 0 48px}
+  .footer-inner{grid-template-columns:1fr}
+  .step-arrow{display:none}
+  .footer-about{max-width:100%}
+}
+@media(max-width:480px){
+  .hero h1{font-size:28px}
+  .product-grid{grid-template-columns:1fr 1fr}
+  .kontak-card{padding:32px 20px}
+}
+@media(max-width:360px){
+  .product-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ████ NAVBAR ████ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">
+      <div class="logo-box">!</div>
+      <span class="logo-text">Sallgen<span>ID</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#harga-robux">Harga Robux</a></li>
+      <li><a href="#gift-card">Gift Card</a></li>
+      <li><a href="#perbandingan">Perbandingan</a></li>
+      <li><a href="#metode">Metode</a></li>
+      <li><a href="#cara-order">Cara Order</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="theme-toggle">
+        <button class="t-btn on" id="btn-dark" onclick="setTheme('dark')">🌙 Dark</button>
+        <button class="t-btn" id="btn-light" onclick="setTheme('light')">☀️ Light</button>
+      </div>
+      <button class="ham" id="hamBtn" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#harga-robux" onclick="closeMenu()">Harga Robux</a>
+  <a href="#gift-card" onclick="closeMenu()">Gift Card</a>
+  <a href="#metode" onclick="closeMenu()">Metode Pembelian</a>
+  <a href="#cara-order" onclick="closeMenu()">Cara Order</a>
+  <a href="#kontak" onclick="closeMenu()">Kontak</a>
+</div>
+
+
+<!-- ████ HERO ████ -->
+<section id="home">
+  <div class="container">
+    <div class="hero-wrap">
+      <div class="hero-text">
+        <div class="hero-badge">Terpercaya & Terlaris 2025 🔥</div>
+        <h1>Beli Robux<br><span class="pink">Murah, Cepat,</span><br>& Aman!</h1>
+        <p class="hero-desc">Top up Robux dengan harga terbaik, proses kilat, dan 3 pilihan metode. Sudah dipercaya ratusan gamer Indonesia.</p>
+        <div class="hero-cta">
+          <a href="#harga-robux" class="btn-primary">Lihat Harga</a>
+          <a href="#kontak" class="btn-secondary">Hubungi Admin</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-n">500+</span><span class="stat-l">Pelanggan</span></div>
+          <div class="stat"><span class="stat-n">99.8%</span><span class="stat-l">Sukses</span></div>
+          <div class="stat"><span class="stat-n">5 Mnt</span><span class="stat-l">Instant</span></div>
+          <div class="stat"><span class="stat-n">4.9 ★</span><span class="stat-l">Rating</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ████ HARGA ROBUX ████ -->
+<section id="harga-robux">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>Harga Robux</h2>
+      <p>Pilih metode dan paket yang paling cocok untuk kamu</p>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="trending-banner reveal">
+      
+      <div class="tb-body">
+        <div class="tb-title">
+          <span class="live-dot"></span>
+          Sedang Trending Sekarang
+        </div>
+        <div class="tb-desc">Produk paling banyak dibeli hari ini — jangan sampai kehabisan stok!</div>
+        <div class="tb-pills">
+          <a href="#harga-robux" onclick="switchTab('instant')" class="tb-pill">
+            1.000 Robux Instant <span class="pill-badge">#1</span>
+          </a>
+          <a href="#harga-robux" onclick="switchTab('hemat')" class="tb-pill">
+            800 Robux Hemat <span class="pill-badge">#2</span>
+          </a>
+          <a href="#gift-card" class="tb-pill">
+            Gift Card Rp 100.000 <span class="pill-badge">#3</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="method-tabs">
+      <button class="m-tab active" onclick="switchTab('instant')" id="tab-instant">
+        Robux Instant <span class="tc">CEPAT</span>
+      </button>
+      <button class="m-tab" onclick="switchTab('hemat')" id="tab-hemat">
+        Metode Hemat <span class="tc">MURAH</span>
+      </button>
+    </div>
+
+    <!-- INSTANT PANEL -->
+    <div class="m-panel show" id="panel-instant">
+      <div class="m-info">
+        <div class="m-info-icon">⚡</div>
+        <div class="m-info-body">
+          <h4>Robux Instant Langsung Masuk ke Akun</h4>
+          <p>Robux langsung diproses di akun Roblox kamu dalam hitungan menit. Metode ini memerlukan <strong>username, password, dan backup code</strong> karena kami akan login dan memproses langsung di akun kamu.</p>
+          <div class="m-tags">
+            <span class="m-tag tag-instant">Proses 1–5 Menit</span>
+            <span class="m-tag tag-instant">Password Diperlukan</span>
+            <span class="m-tag tag-ok">Garansi 100% Masuk</span>
+            <span class="m-tag tag-ok">Akun Tetap Aman</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-grid">
+
+        <div class="p-card reveal" onclick="buyWA('320 Robux Instant','Rp 66.000','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>320 Robux</div>
+          <div class="p-price">Rp 66.000</div>
+          <div class="p-price-sub">≈ Rp 206/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses otomatis</li><li>password diperlukan</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('500 Robux Instant','Rp 76.950','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>500 Robux</div>
+          <div class="p-price">Rp 76.950</div>
+          <div class="p-price-sub">≈ Rp 153/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses otomatis</li><li>password diperlukan</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card hot trending reveal" onclick="buyWA('1.000 Robux Instant','Rp 151.900','instant')">
+          <div class="hot-badge">TERLARIS</div>
+          <div class="trending-badge">TRENDING #1</div>
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>1.000 Robux</div>
+          <div class="p-price">Rp 151.900</div>
+          <div class="p-price-sub">≈ Rp 151/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses otomatis</li><li>Paling populer!</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('1.500 Robux Instant','Rp 226.850','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>1.500 Robux</div>
+          <div class="p-price">Rp 226.850</div>
+          <div class="p-price-sub">≈ Rp 151/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses otomatis</li><li>Cocok belanja item rare</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('2.200 Robux Instant','Rp 301.800','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>2.200 Robux</div>
+          <div class="p-price">Rp 301.800</div>
+          <div class="p-price-sub">≈ Rp 137/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses otomatis</li><li>Value bagus!</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('2.750 Robux Instant','Rp 376.750','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>2.750 Robux</div>
+          <div class="p-price">Rp 376.750</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses otomatis</li><li>Cocok beli gamepass</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('3.300 Robux Instant','Rp 451.700','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>3.300 Robux</div>
+          <div class="p-price">Rp 451.700</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses otomatis</li><li>Untuk belanja besar</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('3.850 Robux Instant','Rp 526.650','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>3.850 Robux</div>
+          <div class="p-price">Rp 526.650</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses otomatis</li><li>Pilihan developer</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('4.400 Robux Instant','Rp 601.600','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>4.400 Robux</div>
+          <div class="p-price">Rp 601.600</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses prioritas</li><li>Untuk developer</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('5.500 Robux Instant','Rp 751.500','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>5.500 Robux</div>
+          <div class="p-price">Rp 751.500</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses prioritas</li><li>Untuk developer</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('6.600 Robux Instant','Rp 901.400','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>6.600 Robux</div>
+          <div class="p-price">Rp 901.400</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses prioritas VIP</li><li>Developer/trader</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('7.700 Robux Instant','Rp 1.051.300','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>7.700 Robux</div>
+          <div class="p-price">Rp 1.051.300</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses prioritas VIP</li><li>Developer/trader</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('8.800 Robux Instant','Rp 1.201.200','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>8.800 Robux</div>
+          <div class="p-price">Rp 1.201.200</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses prioritas VIP</li><li>Developer pro</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('9.900 Robux Instant','Rp 1.351.100','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>9.900 Robux</div>
+          <div class="p-price">Rp 1.351.100</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses prioritas VIP</li><li>Developer pro</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('11.000 Robux Instant','Rp 1.501.000','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>11.000 Robux</div>
+          <div class="p-price">Rp 1.501.000</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses prioritas VIP</li><li>Terbaik developer</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('17.000 Robux Instant','Rp 2.325.450','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>17.000 Robux</div>
+          <div class="p-price">Rp 2.325.450</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses prioritas VIP</li><li>Paket jumbo developer</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('22.000 Robux Instant','Rp 3.000.000','instant')">
+          <div class="p-icon">💎</div>
+          <div class="p-amount"><span class="rbx">R$</span>22.000 Robux</div>
+          <div class="p-price">Rp 3.000.000</div>
+          <div class="p-price-sub">≈ Rp 136/Robux</div>
+          <ul class="p-features"><li>Langsung masuk akun</li><li>Proses prioritas VIP</li><li>Paket terbesar!</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HEMAT PANEL -->
+    <div class="m-panel" id="panel-hemat">
+      <div class="m-info">
+        <div class="m-info-icon">💰</div>
+        <div class="m-info-body">
+          <h4>Metode Hemat Proses 3–7 Hari Kerja</h4>
+          <p>Robux dikirim melalui sistem gamepass Roblox. Kamu perlu <strong>membuat gamepass</strong> di akun Roblox kamu sesuai instruksi admin, lalu kami akan membeli gamepass tersebut. Proses 3–7 hari karena kebijakan pending dari Roblox.</p>
+          <div class="m-tags">
+            <span class="m-tag tag-hemat">Proses 3–7 Hari</span>
+            <span class="m-tag tag-hemat">Perlu Buat Gamepass</span>
+            <span class="m-tag tag-ok">Harga Terjangkau</span>
+            <span class="m-tag tag-ok">Garansi 100% Masuk</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-grid">
+
+        <div class="p-card reveal" onclick="buyWA('100 Robux Hemat','Rp 11.900','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>100 Robux</div>
+          <div class="p-price">Rp 11.900</div>
+          <div class="p-price-sub">≈ Rp 119/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Garansi masuk</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('200 Robux Hemat','Rp 22.800','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>200 Robux</div>
+          <div class="p-price">Rp 22.800</div>
+          <div class="p-price-sub">≈ Rp 114/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Garansi masuk</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('300 Robux Hemat','Rp 33.700','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>300 Robux</div>
+          <div class="p-price">Rp 33.700</div>
+          <div class="p-price-sub">≈ Rp 112/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Garansi masuk</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('400 Robux Hemat','Rp 44.600','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>400 Robux</div>
+          <div class="p-price">Rp 44.600</div>
+          <div class="p-price-sub">≈ Rp 111/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Garansi masuk</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('500 Robux Hemat','Rp 55.200','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>500 Robux</div>
+          <div class="p-price">Rp 55.200</div>
+          <div class="p-price-sub">≈ Rp 110/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Garansi masuk</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('600 Robux Hemat','Rp 65.800','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>600 Robux</div>
+          <div class="p-price">Rp 65.800</div>
+          <div class="p-price-sub">≈ Rp 109/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Garansi masuk</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('700 Robux Hemat','Rp 76.600','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>700 Robux</div>
+          <div class="p-price">Rp 76.600</div>
+          <div class="p-price-sub">≈ Rp 109/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Garansi masuk</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card hot trending reveal" onclick="buyWA('800 Robux Hemat','Rp 87.400','hemat')">
+          <div class="hot-badge">POPULER</div>
+          <div class="trending-badge">TRENDING #2</div>
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>800 Robux</div>
+          <div class="p-price">Rp 87.400</div>
+          <div class="p-price-sub">≈ Rp 109/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Paling diminati!</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('900 Robux Hemat','Rp 98.200','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>900 Robux</div>
+          <div class="p-price">Rp 98.200</div>
+          <div class="p-price-sub">≈ Rp 109/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Garansi masuk</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('1.000 Robux Hemat','Rp 109.000','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>1.000 Robux</div>
+          <div class="p-price">Rp 109.000</div>
+          <div class="p-price-sub">≈ Rp 109/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Cocok beli banyak</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('2.000 Robux Hemat','Rp 217.000','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>2.000 Robux</div>
+          <div class="p-price">Rp 217.000</div>
+          <div class="p-price-sub">≈ Rp 108/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Value terbaik!</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('3.000 Robux Hemat','Rp 325.000','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>3.000 Robux</div>
+          <div class="p-price">Rp 325.000</div>
+          <div class="p-price-sub">≈ Rp 108/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Cocok developer</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('4.000 Robux Hemat','Rp 433.000','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>4.000 Robux</div>
+          <div class="p-price">Rp 433.000</div>
+          <div class="p-price-sub">≈ Rp 108/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Untuk developer</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('5.000 Robux Hemat','Rp 541.000','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>5.000 Robux</div>
+          <div class="p-price">Rp 541.000</div>
+          <div class="p-price-sub">≈ Rp 108/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Untuk developer</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('10.000 Robux Hemat','Rp 1.081.000','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>10.000 Robux</div>
+          <div class="p-price">Rp 1.081.000</div>
+          <div class="p-price-sub">≈ Rp 108/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Developer/trader</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+        <div class="p-card reveal" onclick="buyWA('20.000 Robux Hemat','Rp 2.161.000','hemat')">
+          <div class="p-icon">💰</div>
+          <div class="p-amount"><span class="rbx">R$</span>20.000 Robux</div>
+          <div class="p-price">Rp 2.161.000</div>
+          <div class="p-price-sub">≈ Rp 108/Robux • Via gamepass</div>
+          <ul class="p-features"><li>Via sistem gamepass</li><li>Proses 3–7 hari</li><li>Terbaik developer pro</li></ul>
+          <button class="p-btn">Beli Sekarang</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ GIFT CARD ████ -->
+<section id="gift-card">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>Roblox Gift Card</h2>
+      <p>Kode digital resmi dari UniPin,Toko Pedia, Alfamart dan Indomart harga tetap sesuai, kirim kode via WA/Email</p>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="m-info reveal">
+      <div class="m-info-icon">🎁</div>
+      <div class="m-info-body">
+        <h4>Gift Card Roblox Kode Digital Resmi!</h4>
+        <p>Dapatkan kode redeem Roblox Gift Card resmi. Kamu bisa pakai kode ini untuk membeli Robux atau berlangganan Roblox Premium di <strong>roblox.com/redeem</strong>. Tidak perlu kasih info akun sama sekali!</p>
+        <div class="m-tags">
+          <span class="m-tag tag-gift">Kode Resmi UniPin</span>
+          <span class="m-tag tag-ok">100% Aman</span>
+          <span class="m-tag tag-ok">Kirim ke Gmail</span>
+          <span class="m-tag tag-gift">Proses &lt;5 Menit</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-grid">
+      <div class="p-card reveal" onclick="buyWA('Gift Card Rp 50.000','Rp 50.000','giftcard')">
+        <div class="p-icon">🎁</div>
+        <div class="p-amount">GC Rp 50.000</div>
+        <div class="p-price">Rp 50.000</div>
+        <div class="p-price-sub">~200 Robux setelah redeem</div>
+        <ul class="p-features">
+          <li>Kode resmi Roblox</li>
+          <li>Kirim via WA/Email</li>
+          <li>Langsung bisa dipakai</li>
+        </ul>
+        <button class="p-btn">Beli Gift Card</button>
+      </div>
+      <div class="p-card reveal" onclick="buyWA('Gift Card Rp 65.000','Rp 65.000','giftcard')">
+        <div class="p-icon">🎁</div>
+        <div class="p-amount">GC Rp 65.000</div>
+        <div class="p-price">Rp 65.000</div>
+        <div class="p-price-sub">~260 Robux setelah redeem</div>
+        <ul class="p-features">
+          <li>Kode resmi Roblox</li>
+          <li>Kirim via WA/Email</li>
+          <li>Langsung bisa dipakai</li>
+        </ul>
+        <button class="p-btn">Beli Gift Card</button>
+      </div>
+      <div class="p-card hot trending reveal" onclick="buyWA('Gift Card Rp 100.000','Rp 100.000','giftcard')">
+        <div class="hot-badge">TERPOPULER</div>
+        <div class="trending-badge">TRENDING #3</div>
+        <div class="p-icon">🎁</div>
+        <div class="p-amount">GC Rp 100.000</div>
+        <div class="p-price">Rp 100.000</div>
+        <div class="p-price-sub">~500 Robux setelah redeem</div>
+        <ul class="p-features">
+          <li>Kode resmi Roblox</li>
+          <li>Kirim &lt;5 menit</li>
+          <li>Bisa dikado ke teman!</li>
+        </ul>
+        <button class="p-btn">Beli Gift Card</button>
+      </div>
+      <div class="p-card reveal" onclick="buyWA('Gift Card Rp 200.000','Rp 200.000','giftcard')">
+        <div class="p-icon">🎁</div>
+        <div class="p-amount">GC Rp 200.000</div>
+        <div class="p-price">Rp 200.000</div>
+        <div class="p-price-sub">~1.000 Robux setelah redeem</div>
+        <ul class="p-features">
+          <li>Kode resmi Roblox</li>
+          <li>Kirim &lt;5 menit</li>
+          <li>Cocok buat hadiah ulang tahun</li>
+        </ul>
+        <button class="p-btn">Beli Gift Card</button>
+      </div>
+      <div class="p-card reveal" onclick="buyWA('Gift Card Rp 500.000','Rp 500.000','giftcard')">
+        <div class="p-icon">🎁</div>
+        <div class="p-amount">GC Rp 500.000</div>
+        <div class="p-price">Rp 500.000</div>
+        <div class="p-price-sub">~2.500 Robux setelah redeem</div>
+        <ul class="p-features">
+          <li>Kode resmi Roblox</li>
+          <li>Prioritas pengiriman</li>
+          <li>Terbaik untuk Roblox Premium</li>
+        </ul>
+        <button class="p-btn">Beli Gift Card</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PERBANDINGAN METODE -->
+<section class="compare-section" id="perbandingan">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>Perbandingan Metode</h2>
+      <p>Pilih metode yang paling sesuai dengan kebutuhan kamu</p>
+      <div class="sec-line"></div>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Fitur</th>
+            <th>Robux Instant</th>
+            <th>Metode Hemat</th>
+            <th>Gift Card</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Harga</td><td class="compare-warn">Normal</td><td class="compare-ok">Paling Murah</td><td class="compare-warn">Harga Resmi</td></tr>
+          <tr><td>Kecepatan Proses</td><td class="compare-ok">1–5 Menit</td><td class="compare-warn">3–7 Hari</td><td class="compare-ok">&lt; 5 Menit</td></tr>
+          <tr><td>Password Diperlukan</td><td class="compare-warn">Ya</td><td class="compare-ok">Tidak</td><td class="compare-ok">Tidak</td></tr>
+          <tr><td>Perlu Buat Gamepass</td><td class="compare-ok">Tidak</td><td class="compare-warn">Ya</td><td class="compare-ok">Tidak</td></tr>
+          <tr><td>Cocok Untuk</td><td>Yang butuh cepat</td><td>Yang hemat budget</td><td>Hadiah / tanpa akun</td></tr>
+          <tr><td>Garansi</td><td class="compare-ok">100%</td><td class="compare-ok">100%</td><td class="compare-ok">100%</td></tr>
+          <tr><td>Kirim ke Gmail</td><td class="compare-no">Tidak</td><td class="compare-no">Tidak</td><td class="compare-ok">Ya</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- JAM OPERASIONAL -->
+<section class="ops-section">
+  <div class="container">
+    <div class="ops-card reveal">
+      <div class="ops-left">
+        <h4>Jam Operasional Admin</h4>
+        <p>Senin – Minggu, 08.00 – 23.00 WIB</p>
+        <div class="ops-status">
+          <div class="ops-dot" id="opsDot"></div>
+          <span id="opsLabel">Memeriksa status...</span>
+        </div>
+      </div>
+      <div class="ops-right">
+        <div class="ops-box"><span class="ops-num" id="opsHour">00</span><span class="ops-lbl">Jam</span></div>
+        <div class="ops-box"><span class="ops-num" id="opsMin">00</span><span class="ops-lbl">Menit</span></div>
+        <div class="ops-box"><span class="ops-num" id="opsSec">00</span><span class="ops-lbl">Detik</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ METODE PEMBELIAN ████ -->
+<section id="metode">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>Metode Pembelian</h2>
+      <p>Tiga pilihan metode, masing-masing punya kelebihan sendiri</p>
+      <div class="sec-line"></div>
+    </div>
+    <div class="metode-grid">
+      <!-- Instant -->
+      <div class="met-card reveal">
+        <div class="met-header">
+          <div class="met-icon instant">⚡</div>
+          <div>
+            <div class="met-title">Robux Instant</div>
+            <div class="met-sub">Langsung masuk ke akun</div>
+          </div>
+        </div>
+        <ul class="met-list">
+          <li>Robux masuk ke akun dalam 1–5 menit setelah pembayaran dikonfirmasi</li>
+          <li>Memerlukan username, password, dan backup code akun Roblox kamu</li>
+          <li>Kami login dan memproses langsung di akun kamu data dijamin aman</li>
+          <li>Garansi 100% Robux masuk, akun tetap aman</li>
+        </ul>
+      </div>
+      <!-- Hemat -->
+      <div class="met-card reveal">
+        <div class="met-header">
+          <div class="met-icon hemat">💜</div>
+          <div>
+            <div class="met-title">Metode Hemat</div>
+            <div class="met-sub">Proses 3–7 hari kerja</div>
+          </div>
+        </div>
+        <ul class="met-list">
+          <li>Robux dikirim melalui sistem gamepass Roblox</li>
+          <li>Kamu perlu membuat gamepass di akun kamu sesuai instruksi dari admin</li>
+          <li>Kami akan membeli gamepass tersebut, Robux masuk dalam 3–7 hari</li>
+          <li>Tidak perlu memberikan password cukup username Roblox</li>
+          <li>Garansi penuh jika gagal, refund atau kirim ulang</li>
+        </ul>
+      </div>
+      <!-- Gift Card -->
+      <div class="met-card reveal">
+        <div class="met-header">
+          <div class="met-icon gift">🎁</div>
+          <div>
+            <div class="met-title">Gift Card</div>
+            <div class="met-sub">Kode redeem resmi</div>
+          </div>
+        </div>
+        <ul class="met-list">
+          <li>Kode digital resmi dari UniPin, partner resmi Roblox Indonesia</li>
+          <li>Tidak perlu info akun apapun paling aman!</li>
+          <li>Kode dikirim ke WhatsApp atau Email dalam &lt;5 menit</li>
+          <li>Bisa digunakan untuk beli Robux atau Roblox Premium</li>
+          <li>Cocok untuk hadiah ke teman atau keluarga</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ CARA ORDER ████ -->
+<section id="cara-order" style="background:var(--bg2);transition:background .35s">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>Cara Order</h2>
+      <p>Mudah banget! Ikuti 4 langkah ini dan Robux langsung masuk</p>
+      <div class="sec-line"></div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal" style="position:relative">
+        <div class="step-num">1</div>
+        
+        <h4>Pilih Paket</h4>
+        <p>Pilih jumlah Robux atau nominal Gift Card yang kamu inginkan dari daftar harga di atas.</p>
+        <div class="step-arrow" style="display:block">›</div>
+      </div>
+      <div class="step-card reveal" style="position:relative">
+        <div class="step-num">2</div>
+        
+        <h4>Hubungi Admin</h4>
+        <p>Klik tombol "Beli Sekarang" dan kamu akan diarahkan otomatis ke WhatsApp admin dengan pesan sudah terisi.</p>
+        <div class="step-arrow" style="display:block">›</div>
+      </div>
+      <div class="step-card reveal" style="position:relative">
+        <div class="step-num">3</div>
+        
+        <h4>Lakukan Pembayaran</h4>
+        <p>Bayar via QRIS, GoPay, OVO, Dana, ShopeePay, atau transfer bank sesuai instruksi admin.</p>
+        <div class="step-arrow" style="display:block">›</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">4</div>
+        
+        <h4>Terima Robux!</h4>
+        <p>Robux langsung masuk ke akun atau kode Gift Card dikirim ke WhatsApp/Email kamu!</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <p style="color:var(--text-2);font-size:14px;margin-bottom:16px"><strong>Metode Pembayaran:</strong> QRIS • GoPay • OVO • Dana • ShopeePay • Transfer BCA • BRI • BNI • Mandiri</p>
+    </div>
+  </div>
+</section>
+
+<!-- ████ FAQ ████ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>Pertanyaan Umum</h2>
+      <p>Jawaban untuk pertanyaan yang paling sering ditanyakan</p>
+      <div class="sec-line"></div>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Apa bedanya Robux Instant dengan Metode Hemat?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a">Robux Instant langsung masuk ke akun kamu dalam 1–5 menit, tapi memerlukan username, password, dan backup code. Metode Hemat tidak perlu password — kamu hanya perlu membuat gamepass di akun kamu sesuai instruksi admin, lalu kami akan membelinya. Robux masuk dalam 3–7 hari, harganya lebih terjangkau.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Apakah akun Roblox saya aman?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a">Untuk Metode Hemat dan Gift Card, kamu tidak perlu memberikan password sama sekali. Untuk Robux Instant, kami memerlukan akses login untuk memproses langsung di akun kamu — data kamu dijamin aman dan tidak disalahgunakan. Sudah dipercaya 500+ pelanggan!</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Bagaimana cara kerja Gift Card?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a">Setelah pembayaran dikonfirmasi, kode Gift Card resmi Roblox akan dikirimkan ke Gmail kamu dalam waktu kurang dari 5 menit. Kamu bisa redeem kode tersebut di roblox.com/redeem untuk mendapatkan Robux atau berlangganan Roblox Premium.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Metode pembayaran apa saja yang tersedia?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a">Kami menerima QRIS, GoPay, OVO, Dana, ShopeePay, serta transfer bank BCA, BRI, BNI, dan Mandiri. Konfirmasi pembayaran langsung via WhatsApp ke admin kami.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Bagaimana jika Robux tidak masuk setelah batas waktu?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a">Untuk Metode Hemat, jika Robux tidak masuk dalam 3–7 hari kerja, kami akan mengembalikan uang kamu sepenuhnya. Untuk Robux Instant, jika bermasalah dalam 1×24 jam kami langsung proses ulang atau refund. Garansi 100%!</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Apakah ada minimal pembelian?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a">Tidak ada minimal pembelian! Kamu bisa mulai dari paket terkecil sesuai kebutuhan. Semua paket diproses dengan standar layanan yang sama.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ KONTAK ████ -->
+<section id="kontak">
+  <div class="container">
+    <div class="kontak-inner">
+      <div class="kontak-card reveal">
+        
+        <div class="kontak-btns">
+          <a href="https://wa.me/6288289316069" class="wa-btn" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat WhatsApp Sekarang
+          </a>
+          <a href="https://tinnzstore.com" class="dp-btn" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v14a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5h12v11H6V7zm2 2v2h2V9H8zm4 0v2h2V9h-2zm-4 4v2h2v-2H8zm4 0v2h2v-2h-2z"/></svg>
+            Digital Produk — TinnzStore
+          </a>
+        </div>
+        <div class="kontak-detail">
+          <div class="kd-item"><div class="kd-dot"></div> Online 24 Jam</div>
+          <div class="kd-item"><div class="kd-dot"></div> Respon Cepat</div>
+          <div class="kd-item"><div class="kd-dot"></div> 100% Aman</div>
+          <div class="kd-item"><div class="kd-dot"></div> Garansi Penuh</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ████ FOOTER ████ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">Sallgen<span>ID</span></div>
+        <p class="footer-about">Toko Robux terpercaya di Indonesia. Garansi 100% aman dan pasti masuk.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#harga-robux">Harga Robux</a></li>
+          <li><a href="#gift-card">Gift Card</a></li>
+          <li><a href="#metode">Metode Pembelian</a></li>
+          <li><a href="#cara-order">Cara Order</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Produk</h5>
+        <ul>
+          <li><a href="#harga-robux">Robux Instant</a></li>
+          <li><a href="#harga-robux">Metode Hemat</a></li>
+          <li><a href="#gift-card">Gift Card Roblox</a></li>
+          <li><a href="#kontak">Hubungi Kami</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sallgen ID Tidak berafiliasi dengan Roblox Corporation. · <button class="sk-link" onclick="openSkModal()">Syarat & Ketentuan</button></p>
+      <p>Dibuat dengan <span class="heart">♥</span> untuk gamer Indonesia</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ████ SCRIPTS ████ -->
+<script>
+/* ── Theme ───────────────────────────────────────── */
+function setTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('btn-dark').classList.toggle('on', t === 'dark');
+  document.getElementById('btn-light').classList.toggle('on', t === 'light');
+  localStorage.setItem('rbx-theme', t);
+}
+const saved = localStorage.getItem('rbx-theme') || 'dark';
+setTheme(saved);
+
+/* ── Mobile menu ─────────────────────────────────── */
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+document.addEventListener('click', e => {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamBtn');
+  if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+
+/* ── Tab switching ───────────────────────────────── */
+function switchTab(t) {
+  ['instant','hemat'].forEach(m => {
+    document.getElementById('tab-' + m).classList.toggle('active', m === t);
+    document.getElementById('panel-' + m).classList.toggle('show', m === t);
+  });
+}
+
+/* ── FAQ ─────────────────────────────────────────── */
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ── WhatsApp redirect ───────────────────────────── */
+function buyWA(product, price, type) {
+  let msg = '';
+
+  if (type === 'instant') {
+    msg = encodeURIComponent(
+`Halo admin Sallgen ID! 👋
+
+Saya ingin memesan:
+📦 Produk: ${product}
+💰 Harga: ${price}
+
+Nama roblox : 
+Sandi : 
+Backup code [wajib di isi untuk produk ini]
+code 1 : 
+code 2 : `
+    );
+  } else if (type === 'hemat') {
+    msg = encodeURIComponent(
+`Halo admin Sallgen ID! 👋
+
+Saya ingin memesan:
+📦 Produk: ${product}
+💰 Harga: ${price}
+
+Nama roblox : 
+Gmail : 
+Nomer wa : 
+Metode pembayaran : 
+
+Kamu meminta gmail dan nomer wa untuk chat jika mengalami kendala. Robux masuk 3-7 hari, jika melewati batas waktu/robux tidak masuk kami akan mengembalikan uang anda.`
+    );
+  } else {
+    msg = encodeURIComponent(
+`Halo admin Sallgen ID! 👋
+
+Saya ingin memesan:
+📦 Produk: ${product}
+💰 Harga: ${price}
+
+Gmail : 
+Nomer wa : 
+
+Gmail wajib di isi, karena kami akan mengirimkan kode giftcard ke akun Gmail anda.`
+    );
+  }
+
+  window.open('https://wa.me/6288289316069?text=' + msg, '_blank');
+}
+
+/* ── Scroll Reveal ───────────────────────────────── */
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('in'), i * 60);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+/* ── Ops Countdown ──────────────────────────────── */
+function updateOps() {
+  const now = new Date();
+  // WIB = UTC+7
+  const wib = new Date(now.toLocaleString('en-US', {timeZone:'Asia/Jakarta'}));
+  const h = wib.getHours(), m = wib.getMinutes(), s = wib.getSeconds();
+  const totalSec = h * 3600 + m * 60 + s;
+  const openSec = 8 * 3600;   // 08:00
+  const closeSec = 23 * 3600; // 23:00
+  const dot = document.getElementById('opsDot');
+  const lbl = document.getElementById('opsLabel');
+  let remaining;
+  if (totalSec >= openSec && totalSec < closeSec) {
+    dot.className = 'ops-dot online';
+    lbl.textContent = 'Admin sedang Online';
+    remaining = closeSec - totalSec;
+  } else if (totalSec < openSec) {
+    dot.className = 'ops-dot soon';
+    lbl.textContent = 'Admin buka pukul 08.00 WIB';
+    remaining = openSec - totalSec;
+  } else {
+    dot.className = 'ops-dot offline';
+    lbl.textContent = 'Admin sedang Offline — buka besok 08.00 WIB';
+    remaining = (24 * 3600 - totalSec) + openSec;
+  }
+  const rh = Math.floor(remaining / 3600);
+  const rm = Math.floor((remaining % 3600) / 60);
+  const rs = remaining % 60;
+  document.getElementById('opsHour').textContent = String(rh).padStart(2,'0');
+  document.getElementById('opsMin').textContent  = String(rm).padStart(2,'0');
+  document.getElementById('opsSec').textContent  = String(rs).padStart(2,'0');
+}
+updateOps();
+setInterval(updateOps, 1000);
+
+/* ── Syarat & Ketentuan Modal ────────────────────── */
+function openSkModal() {
+  document.getElementById('skModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSkModalBtn() {
+  document.getElementById('skModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeSkModal(e) {
+  if (e.target === document.getElementById('skModal')) closeSkModalBtn();
+}
+
+/* ── Smooth nav highlight ────────────────────────── */
+const sections = ['home','harga-robux','gift-card','metode','cara-order','kontak'];
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 80;
+  sections.forEach(id => {
+    const sec = document.getElementById(id);
+    if (!sec) return;
+    if (sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y) {
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + id ? 'var(--accent)' : '';
+        a.style.background = a.getAttribute('href') === '#' + id ? 'var(--accent-soft)' : '';
+      });
+    }
+  });
+});
+</script>
+
+<!-- FLOATING WA BUTTON -->
+<a href="https://wa.me/6288289316069" class="float-wa" target="_blank" rel="noopener" title="Chat WhatsApp">
+  <div class="float-wa-pulse"></div>
+  WA
+</a>
+
+<!-- SYARAT & KETENTUAN MODAL -->
+<div class="modal-overlay" id="skModal" onclick="closeSkModal(event)">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3>Syarat & Ketentuan</h3>
+      <button class="modal-close-btn" onclick="closeSkModalBtn()">✕</button>
+    </div>
+    <div class="modal-body">
+      <h5>1. Umum</h5>
+      <p>Dengan melakukan pembelian di Sallgen ID, kamu dianggap telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku berikut ini.</p>
+
+      <div class="sk-divider"></div>
+      <h5>2. Metode Robux Instant</h5>
+      <ul>
+        <li>Kamu wajib memberikan username, password, dan backup code akun Roblox yang valid.</li>
+        <li>Kami hanya menggunakan akses untuk mengirimkan Robux dan tidak akan mengubah data akun kamu.</li>
+        <li>Pastikan akun tidak dalam kondisi terkunci atau dibanned sebelum melakukan pembelian.</li>
+        <li>Proses berlangsung dalam 1–5 menit setelah pembayaran dikonfirmasi.</li>
+      </ul>
+
+      <div class="sk-divider"></div>
+      <h5>3. Metode Hemat</h5>
+      <ul>
+        <li>Kamu wajib membuat gamepass di akun Roblox sesuai instruksi yang diberikan admin.</li>
+        <li>Harga gamepass harus sesuai nominal yang ditentukan, tidak boleh diubah atau dihapus selama proses berlangsung.</li>
+        <li>Proses berlangsung 3–7 hari kerja karena kebijakan pending dari Roblox.</li>
+        <li>Jika Robux tidak masuk melewati batas waktu 7 hari, kami akan melakukan refund penuh.</li>
+      </ul>
+
+      <div class="sk-divider"></div>
+      <h5>4. Gift Card</h5>
+      <ul>
+        <li>Kamu wajib memberikan alamat Gmail yang aktif dan valid untuk pengiriman kode.</li>
+        <li>Kode Gift Card dikirim dalam kurang dari 5 menit setelah pembayaran dikonfirmasi.</li>
+        <li>Kode yang sudah dikirim tidak dapat dikembalikan atau ditukar.</li>
+        <li>Pastikan Gmail yang diberikan benar sebelum melakukan order.</li>
+      </ul>
+
+      <div class="sk-divider"></div>
+      <h5>5. Pembayaran</h5>
+      <ul>
+        <li>Pembayaran dilakukan setelah admin mengkonfirmasi ketersediaan produk.</li>
+        <li>Bukti pembayaran wajib dikirimkan ke admin via WhatsApp.</li>
+        <li>Pembayaran yang sudah masuk tidak dapat dibatalkan kecuali terjadi kegagalan dari pihak kami.</li>
+      </ul>
+
+      <div class="sk-divider"></div>
+      <h5>6. Garansi & Refund</h5>
+      <ul>
+        <li>Kami memberikan garansi 100% uang kembali jika pesanan gagal diproses karena kesalahan dari pihak kami.</li>
+        <li>Refund dilakukan dalam 1×24 jam ke metode pembayaran yang sama.</li>
+        <li>Garansi tidak berlaku jika kegagalan disebabkan oleh data yang salah dari pembeli.</li>
+      </ul>
+
+      <div class="sk-divider"></div>
+      <h5>7. Privasi Data</h5>
+      <p>Data akun yang kamu berikan hanya digunakan untuk keperluan proses pengiriman Robux dan tidak akan disimpan, disebarkan, atau disalahgunakan oleh pihak kami.</p>
+
+      <div class="sk-divider"></div>
+      <p style="font-size:12.5px;color:var(--text-3);margin-top:8px;">Terakhir diperbarui: Maret 2026 · Sallgen ID tidak berafiliasi dengan Roblox Corporation.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
